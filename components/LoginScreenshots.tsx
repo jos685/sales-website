@@ -4,31 +4,37 @@ import { FadeUp, SlideIn, ScalePop } from "@/components/Motion";
 const portals = [
   {
     key: "owner", label: "Owner Portal",
+    url: "https://sales-tracker-lovat.vercel.app/register",
     tagline: "You're the boss. Act like it.",
     description: "Every sale, every agent, every shilling — visible from your phone the moment it happens. No more guessing. No more end-of-day surprises.",
-    file: "/screenshots/owner.png", alt: "Epic Sales Tracker owner portal dashboard",
+    file: "/screenshots/owner.png", alt: "JS Sales Tracker owner portal dashboard",
     lightBg: "bg-blue-50", borderColor: "border-blue-100", tagStyle: "bg-blue-600 text-white",
     checkColor: "text-blue-600", chipStyle: "bg-blue-50 text-blue-700 border-blue-200", circleBg: "bg-blue-400",
+    ringColor: "ring-blue-400/40",
     features: ["Real-time revenue & sales dashboard","Manage all agents and shops from one place","Approve cash handovers — no more disputes","Daily business summary to your email at 10 PM","Low stock alerts before you run out"],
     metric: { value: "100%", label: "Visibility over your business" },
   },
   {
     key: "shop", label: "Shop Portal",
+    url: "https://shop-olive-tau.vercel.app/pos",
     tagline: "Your shop, running like a machine.",
     description: "A full POS terminal purpose-built for physical shops. Multiple agents, live stock, and every transaction synced to the owner the second it happens.",
     file: "/screenshots/shop.png", alt: "Epic Shop Tracker POS terminal",
     lightBg: "bg-orange-50", borderColor: "border-orange-100", tagStyle: "bg-orange-500 text-white",
     checkColor: "text-orange-500", chipStyle: "bg-orange-50 text-orange-700 border-orange-200", circleBg: "bg-orange-400",
+    ringColor: "ring-orange-400/40",
     features: ["Barcode scanner — scan, sell, done","Multiple agents assigned to one shop","Live stock levels at a glance","Request stock from the owner in one tap","Works offline — syncs when back online"],
     metric: { value: "0 sec", label: "Delay between sale & owner visibility" },
   },
   {
     key: "agent", label: "Agent Portal",
+    url: "https://agent-app-olive.vercel.app/login",
     tagline: "Sell more. Know exactly where you stand.",
     description: "Agents see their daily target, their rank, and their commissions live. That alone changes performance — no manager needed to push them.",
-    file: "/screenshots/agent.png", alt: "Epic Agent Tracker field agent portal",
+    file: "/screenshots/agent.png", alt: "JS Sales Tracker agent portal",
     lightBg: "bg-amber-50", borderColor: "border-amber-100", tagStyle: "bg-amber-500 text-white",
     checkColor: "text-amber-500", chipStyle: "bg-amber-50 text-amber-700 border-amber-200", circleBg: "bg-amber-400",
+    ringColor: "ring-amber-400/40",
     features: ["Scan & sell — record a sale in seconds","See daily target and team ranking live","Commission tracker — always know your earnings","Submit cash handovers with one request","Works offline in the field"],
     metric: { value: "↑ 40%", label: "Average agent sales increase" },
   },
@@ -88,11 +94,23 @@ export default function LoginScreenshots() {
                 <ScalePop delay={0.2} className={`relative flex items-center justify-center overflow-hidden p-4 sm:p-6 md:p-8 min-h-64 sm:min-h-80 md:min-h-96 lg:min-h-[440px] ${p.lightBg} ${i % 2 !== 0 ? "lg:order-1" : ""}`}>
                   <div className={`pointer-events-none absolute -right-12 -top-12 h-56 w-56 rounded-full ${p.circleBg} opacity-10`} />
                   <div className={`pointer-events-none absolute -left-10 -bottom-10 h-40 w-40 rounded-full ${p.circleBg} opacity-10`} />
-                  <div className="relative w-full overflow-hidden rounded-xl border border-white/60 shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open ${p.label}`}
+                    className={`group relative block w-full overflow-hidden rounded-xl border border-white/60 shadow-2xl ring-0 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:ring-4 ${p.ringColor}`}
+                  >
                     <div className="relative w-full" style={{ aspectRatio: "16/10" }}>
                       <Image src={p.file} alt={p.alt} fill className="object-cover object-top" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw" />
                     </div>
-                  </div>
+                    {/* hover overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/10">
+                      <span className="translate-y-2 scale-90 rounded-full bg-white/90 px-4 py-2 text-xs font-semibold text-gray-800 opacity-0 shadow-lg backdrop-blur-sm transition-all duration-300 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100">
+                        Open {p.label} →
+                      </span>
+                    </div>
+                  </a>
                 </ScalePop>
 
               </div>

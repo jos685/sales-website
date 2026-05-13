@@ -14,13 +14,14 @@ export default function Icon() {
         alignItems: "center",
         justifyContent: "center",
         borderRadius: "7px",
-        fontSize: "22px",
+        fontSize: "13px",
         fontWeight: 900,
         color: "white",
         fontFamily: "system-ui",
+        letterSpacing: "-0.03em",
       }}
     >
-      S
+      JS
     </div>,
     { ...size }
   );

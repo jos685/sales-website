@@ -1,6 +1,6 @@
 import { ScalePop } from "@/components/Motion";
 
-const APP_URL = "https://sales-tracker-lovat.vercel.app";
+const APP_URL = "https://sales-tracker-lovat.vercel.app/register";
 
 export default function CallToAction() {
   return (

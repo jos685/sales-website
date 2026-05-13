@@ -1,6 +1,6 @@
 import { FadeUp, StaggerGrid, StaggerItem } from "@/components/Motion";
 
-const APP_URL = "https://sales-tracker-lovat.vercel.app";
+const APP_URL = "https://sales-tracker-lovat.vercel.app/register";
 
 const plans = [
   {

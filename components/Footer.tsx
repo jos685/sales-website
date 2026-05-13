@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const APP_URL = "https://sales-tracker-lovat.vercel.app";
+const REGISTER_URL = "https://sales-tracker-lovat.vercel.app/register";
 
 const ease = [0.21, 0.47, 0.32, 0.98] as const;
 
@@ -18,9 +18,9 @@ const columns = [
   {
     heading: "Portals",
     links: [
-      { label: "Owner Portal", href: APP_URL },
-      { label: "Agent Portal", href: APP_URL },
-      { label: "Shop Portal",  href: APP_URL },
+      { label: "Owner Portal", href: "https://sales-tracker-lovat.vercel.app/register" },
+      { label: "Agent Portal", href: "https://agent-app-olive.vercel.app/login"        },
+      { label: "Shop Portal",  href: "https://shop-olive-tau.vercel.app/pos"           },
     ],
   },
   {
@@ -58,9 +58,9 @@ export default function Footer() {
             <div>
               <div className="mb-4 flex items-center gap-3">
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent shadow-lg shadow-accent/40">
-                  <span className="text-sm font-black text-white">S</span>
+                  <span className="text-xs font-black tracking-tight text-white">JS</span>
                 </div>
-                <span className="text-xl font-bold text-white">Epic Sales Tracker</span>
+                <span className="text-xl font-bold text-white">JS Sales Tracker</span>
               </div>
               <p className="max-w-sm text-sm leading-relaxed text-slate-300">
                 The all-in-one sales management platform for business owners
@@ -69,7 +69,7 @@ export default function Footer() {
             </div>
 
             <motion.a
-              href={APP_URL}
+              href={REGISTER_URL}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}
@@ -112,7 +112,7 @@ export default function Footer() {
         {/* ── bottom bar ── */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/8 py-7 sm:flex-row">
           <p className="text-xs text-slate-400">
-            © 2026 Epic Sales Tracker. All rights reserved.
+            © 2026 JS Sales Tracker. All rights reserved.
           </p>
 
           <div className="flex items-center gap-2 rounded-full border border-green-500/25 bg-green-500/10 px-4 py-1.5">

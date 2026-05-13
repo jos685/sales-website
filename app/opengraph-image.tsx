@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Epic Sales Tracker — Sales Management for Kenyan Businesses";
+export const alt = "JS Sales Tracker — Sales Management for Kenyan Businesses";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -29,15 +29,16 @@ export default function Image() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontSize: "26px",
+            fontSize: "18px",
             fontWeight: 900,
             color: "white",
+            letterSpacing: "-0.02em",
           }}
         >
-          S
+          JS
         </div>
         <span style={{ color: "white", fontSize: "26px", fontWeight: 700 }}>
-          Epic Sales Tracker
+          JS Sales Tracker
         </span>
       </div>
 

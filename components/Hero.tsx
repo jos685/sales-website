@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import DashboardMockup from "@/components/DashboardMockup";
 
-const APP_URL = "https://sales-tracker-lovat.vercel.app";
+const APP_URL = "https://sales-tracker-lovat.vercel.app/register";
 
 const floatingCards = [
   {
@@ -65,7 +65,7 @@ const floatingCards = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-20 pb-10 md:pt-32 md:pb-20">
+    <section className="relative overflow-hidden pt-28 pb-10 md:pt-36 md:pb-20">
       {/* subtle dot grid */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
@@ -133,7 +133,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.18 }}
               className="mt-6 max-w-[480px] text-base leading-relaxed text-muted sm:text-lg"
             >
-              Epic Sales Tracker gives Kenyan business owners{" "}
+              JS Sales Tracker gives Kenyan business owners{" "}
               <strong className="font-semibold text-ink">
                 live visibility
               </strong>{" "}
