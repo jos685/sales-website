@@ -84,9 +84,22 @@ export default function LoginScreenshots() {
                       ))}
                     </ul>
                   </div>
-                  <div className={`inline-flex w-fit flex-col rounded-xl border px-5 py-3 ${p.chipStyle}`}>
-                    <span className="text-xl font-black md:text-2xl">{p.metric.value}</span>
-                    <span className="text-xs font-medium opacity-80">{p.metric.label}</span>
+                  <div className="flex flex-col gap-4">
+                    <div className={`inline-flex w-fit flex-col rounded-xl border px-5 py-3 ${p.chipStyle}`}>
+                      <span className="text-xl font-black md:text-2xl">{p.metric.value}</span>
+                      <span className="text-xs font-medium opacity-80">{p.metric.label}</span>
+                    </div>
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex w-fit items-center gap-1.5 text-sm font-semibold underline underline-offset-4 transition-opacity duration-200 hover:opacity-70 ${p.checkColor}`}
+                    >
+                      Click here to visit the {p.label}
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="flex-shrink-0">
+                        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </a>
                   </div>
                 </SlideIn>
 
