@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import BrandName from "@/components/BrandName";
 
 const REGISTER_URL = "https://sales-tracker-lovat.vercel.app/register";
 
@@ -57,10 +59,14 @@ export default function Footer() {
 
             <div>
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent shadow-lg shadow-accent/40">
-                  <span className="text-xs font-black tracking-tight text-white">JS</span>
-                </div>
-                <span className="text-xl font-bold text-white">JS Sales Tracker</span>
+                <Image
+                  src="/screenshots/Qc.png"
+                  alt="QASHUP logo"
+                  width={40}
+                  height={40}
+                  className="rounded-xl"
+                />
+                <BrandName className="text-xl" />
               </div>
               <p className="max-w-sm text-sm leading-relaxed text-slate-300">
                 The all-in-one sales management platform for business owners
@@ -112,7 +118,7 @@ export default function Footer() {
         {/* ── bottom bar ── */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/8 py-7 sm:flex-row">
           <p className="text-xs text-slate-400">
-            © 2026 JS Sales Tracker. All rights reserved.
+            © 2026 QASHUP. All rights reserved.
           </p>
 
           <div className="flex items-center gap-2 rounded-full border border-green-500/25 bg-green-500/10 px-4 py-1.5">

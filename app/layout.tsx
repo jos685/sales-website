@@ -12,12 +12,17 @@ const BASE_URL = "https://sales-tracker-lovat.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
+  icons: {
+    icon: [{ url: "/screenshots/Qc.png", type: "image/png" }],
+    apple: [{ url: "/screenshots/Qc.png", type: "image/png" }],
+    shortcut: "/screenshots/Qc.png",
+  },
   title: {
-    default: "JS Sales Tracker — Manage Agents, Shops & Sales in Real Time",
-    template: "%s | JS Sales Tracker",
+    default: "QASHUP — Manage Agents, Shops & Sales in Real Time",
+    template: "%s | QASHUP",
   },
   description:
-    "JS Sales Tracker is a powerful SaaS platform for business owners in Kenya and East Africa to manage agents, shops, stock, commissions, and sales — all in one place.",
+    "QASHUP is a powerful SaaS platform for business owners in Kenya and East Africa to manage agents, shops, stock, commissions, and sales — all in one place.",
   keywords: [
     "sales tracker Kenya",
     "agent management system Kenya",
@@ -30,18 +35,18 @@ export const metadata: Metadata = {
     "POS terminal Kenya",
     "real-time sales dashboard",
   ],
-  authors: [{ name: "JS Sales Tracker", url: BASE_URL }],
-  creator: "JS Sales Tracker",
-  publisher: "JS Sales Tracker",
+  authors: [{ name: "QASHUP", url: BASE_URL }],
+  creator: "QASHUP",
+  publisher: "QASHUP",
   alternates: {
     canonical: BASE_URL,
   },
   openGraph: {
-    title: "JS Sales Tracker — Manage Agents, Shops & Sales in Real Time",
+    title: "QASHUP — Manage Agents, Shops & Sales in Real Time",
     description:
       "Give every owner full visibility. Every agent a target. Every shop a terminal. One platform built for Kenya.",
     url: BASE_URL,
-    siteName: "JS Sales Tracker",
+    siteName: "QASHUP",
     type: "website",
     locale: "en_KE",
     images: [
@@ -49,13 +54,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "JS Sales Tracker — Sales Management for Kenyan Businesses",
+        alt: "QASHUP — Sales Management for Kenyan Businesses",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "JS Sales Tracker — Real-Time Sales Management",
+    title: "QASHUP — Real-Time Sales Management",
     description:
       "Real-time sales tracking for Kenyan businesses. Manage agents, shops, stock & commissions.",
     images: ["/opengraph-image"],
@@ -80,14 +85,14 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": `${BASE_URL}/#website`,
       url: BASE_URL,
-      name: "JS Sales Tracker",
+      name: "QASHUP",
       description: "Sales management SaaS for Kenyan and East African businesses",
       inLanguage: "en-KE",
     },
     {
       "@type": "Organization",
       "@id": `${BASE_URL}/#organization`,
-      name: "JS Sales Tracker",
+      name: "QASHUP",
       url: BASE_URL,
       logo: {
         "@type": "ImageObject",
@@ -107,7 +112,7 @@ const jsonLd = {
     {
       "@type": "SoftwareApplication",
       "@id": `${BASE_URL}/#software`,
-      name: "JS Sales Tracker",
+      name: "QASHUP",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web, Android, iOS",
       description:

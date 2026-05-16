@@ -53,7 +53,7 @@ export default function DashboardMockup() {
             <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/60" />
           </div>
           <span className="hidden font-mono text-[10px] text-zinc-500 sm:block">
-            EpicSalesTracker · Owner Dashboard
+            QASHUP · Owner Dashboard
           </span>
           <div className="rounded border border-white/8 px-2 py-0.5 text-[10px] font-semibold text-zinc-500">
             Code: <span className="text-zinc-300">945911</span>

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "JS Sales Tracker — Sales Management for Kenyan Businesses";
+export const alt = "QASHUP — Sales Management for Kenyan Businesses";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -35,11 +35,12 @@ export default function Image() {
             letterSpacing: "-0.02em",
           }}
         >
-          JS
+          Q
         </div>
-        <span style={{ color: "white", fontSize: "26px", fontWeight: 700 }}>
-          JS Sales Tracker
-        </span>
+        <div style={{ display: "flex", fontSize: "26px", fontWeight: 900, letterSpacing: "-0.03em" }}>
+          <span style={{ color: "#f97316" }}>QASH</span>
+          <span style={{ color: "#06b6d4" }}>UP</span>
+        </div>
       </div>
 
       {/* Headline — all children wrapped in spans inside a flex container */}

@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import BrandName from "@/components/BrandName";
 
 const APP_URL = "https://sales-tracker-lovat.vercel.app/register";
 
@@ -52,13 +54,16 @@ export default function Navbar() {
 
         {/* Logo */}
         <a href="/" className="flex shrink-0 items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent shadow-md shadow-accent/40">
-            <span className="text-xs font-black tracking-tight text-white">JS</span>
-          </div>
+          <Image
+            src="/screenshots/Qc.png"
+            alt="QASHUP logo"
+            width={56}
+            height={56}
+            className="rounded-lg w-9 h-9 md:w-12 md:h-12 lg:w-14 lg:h-14"
+            priority
+          />
           <div className="flex flex-col leading-none">
-            <span className="text-base font-bold tracking-tight text-white">
-              JS Sales Tracker
-            </span>
+            <BrandName className="text-base" />
             <span className="hidden text-[10px] font-medium text-slate-400 sm:block">
               Kenya & East Africa
             </span>

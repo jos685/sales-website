@@ -133,7 +133,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.18 }}
               className="mt-6 max-w-[480px] text-base leading-relaxed text-muted sm:text-lg"
             >
-              JS Sales Tracker gives Kenyan business owners{" "}
+              QASHUP gives Kenyan business owners{" "}
               <strong className="font-semibold text-ink">
                 live visibility
               </strong>{" "}

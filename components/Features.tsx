@@ -52,7 +52,7 @@ export default function Features() {
 
         <FadeUp className="mb-12 md:mb-16">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-orange-400">
-            Why JS Sales Tracker
+            Why QASHUP
           </p>
           <h2 id="features-heading" className="text-3xl font-bold tracking-tight text-white md:text-5xl">
             Built for how Kenyan<br className="hidden sm:block" /> businesses actually work.
