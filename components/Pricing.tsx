@@ -4,23 +4,23 @@ const APP_URL = "https://sales-tracker-lovat.vercel.app/register";
 
 const plans = [
   {
-    name: "Starter", price: "999", capacity: "3 agents · 3 shops", tagline: "Small team, real results.",
+    name: "Starter", price: "399", capacity: "3 agents · 3 shops", tagline: "Small team, real results.",
     highlight: false, badge: null,
     features: ["Full sales tracking","Stock management","Live owner dashboard","Cash handover approvals","Commission tracking"],
     locked: ["PDF & Excel export","Reports & analytics","Daily email reports"],
     btnClass: "border border-border text-ink hover:bg-bg transition-colors",
   },
   {
-    name: "Growth", price: "1,999", capacity: "10 agents · 5 shops", tagline: "The plan most businesses need.",
+    name: "Growth", price: "999", capacity: "10 agents · 5 shops", tagline: "The plan most businesses need.",
     highlight: true, badge: "Most popular",
     features: ["Everything in Starter","PDF & Excel export","Reports & analytics","Daily email reports at 10 PM","Priority support"],
     locked: [],
     btnClass: "bg-accent text-white hover:opacity-90 transition-opacity shadow-lg shadow-accent/30",
   },
   {
-    name: "Pro", price: "4,999", capacity: "Unlimited agents & shops", tagline: "No limits. Full scale.",
+    name: "Custom Package", price: "-----", capacity: "Any number of agents & shops depending on your needs", tagline: "No limits. Full scale.",
     highlight: false, badge: null,
-    features: ["Everything in Growth","Unlimited agents","Unlimited shops","Advanced analytics","Dedicated support"],
+    features: ["Everything in Growth","Advanced analytics","Dedicated support"],
     locked: [],
     btnClass: "border border-border text-ink hover:bg-bg transition-colors",
   },

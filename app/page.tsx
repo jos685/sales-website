@@ -11,6 +11,7 @@ import FAQ from "@/components/FAQ";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <CallToAction />
       <Footer />
       <ScrollToTop />
+      <WhatsAppButton />
     </main>
   );
 }
