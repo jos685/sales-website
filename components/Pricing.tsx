@@ -5,7 +5,7 @@ const WA_URL   = "https://wa.me/254783069010?text=" + encodeURIComponent("Hi! I'
 
 const plans = [
   {
-    name: "Starter", price: "399", capacity: "3 agents · 3 shops",
+    name: "STARTER", price: "399", capacity: "3 agents · 3 shops",
     tagline: "Small team, real results.",
     highlight: false, badge: null, custom: false,
     features: ["Full sales tracking","Stock management","Live owner dashboard","Cash handover approvals","Commission tracking"],
@@ -15,7 +15,7 @@ const plans = [
     btnClass: "border border-border text-ink hover:bg-bg transition-colors",
   },
   {
-    name: "Growth", price: "999", capacity: "10 agents · 5 shops",
+    name: "GROWTH", price: "999", capacity: "10 agents · 5 shops",
     tagline: "The plan most businesses need.",
     highlight: true, badge: "Most popular", custom: false,
     features: ["Everything in Starter","PDF & Excel export","Reports & analytics","Daily email reports at 10 PM","Priority support"],
@@ -25,10 +25,10 @@ const plans = [
     btnClass: "bg-accent text-white hover:opacity-90 transition-opacity shadow-lg shadow-accent/30",
   },
   {
-    name: "Custom Package", price: null, capacity: null,
+    name: "PRO", price: null, capacity: null,
     tagline: null,
     highlight: false, badge: null, custom: true,
-    features: ["Everything in Growth","Unlimited agents & shops","Dedicated account manager"],
+    features: ["Everything in Growth","Agents & shops set to your needs","Dedicated account manager"],
     locked: [],
     btnLabel: "Chat with us on WhatsApp",
     btnHref: WA_URL,
