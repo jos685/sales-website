@@ -124,7 +124,7 @@ export default function Pricing() {
               </div>
 
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-black text-accent">KSh 999</span>
+                <span className="text-4xl font-black text-accent">KSh 1049</span>
                 <span className="text-sm text-muted">/mo</span>
               </div>
               <p className="mt-1.5 text-sm text-muted">The plan most businesses need.</p>
