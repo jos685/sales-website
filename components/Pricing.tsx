@@ -62,8 +62,8 @@ export default function Pricing() {
             <div className="relative flex flex-col rounded-2xl border border-border bg-surface p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:p-8">
 
               <div className="mb-4">
-                <h3 className="text-base font-bold text-ink">Starter</h3>
-                <p className="mt-0.5 text-xs text-muted">Up to 3 agents · Up to 3 shops</p>
+                <h3 className="text-base font-bold text-ink">Mkulima Mdogo</h3>
+                <p className="mt-0.5 text-xs text-muted">Up to 3 agents · Up to 2 shops</p>
               </div>
 
               {/* primary price */}
@@ -77,11 +77,11 @@ export default function Pricing() {
               <div className="mt-3 flex flex-wrap gap-2">
                 <span className="inline-flex items-center gap-1 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="4" stroke="#16a34a" strokeWidth="1.4"/><path d="M5 3v2.5l1.5 1" stroke="#16a34a" strokeWidth="1.2" strokeLinecap="round"/></svg>
-                  KSh 28 / day
+                  KSh 25 / day
                 </span>
                 <span className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="4" stroke="#2563eb" strokeWidth="1.4"/><path d="M5 3v2.5l1.5 1" stroke="#2563eb" strokeWidth="1.2" strokeLinecap="round"/></svg>
-                  KSh 200 / week
+                  KSh 165 / week
                 </span>
               </div>
               <p className="mt-1.5 text-[10px] text-muted">Flexible billing — daily &amp; weekly available on this plan only.</p>
@@ -119,7 +119,7 @@ export default function Pricing() {
               </div>
 
               <div className="mb-4">
-                <h3 className="text-base font-bold text-ink">Growth</h3>
+                <h3 className="text-base font-bold text-ink">Bossy</h3>
                 <p className="mt-0.5 text-xs text-muted">Up to 10 agents · Up to 5 shops</p>
               </div>
 
@@ -128,6 +128,12 @@ export default function Pricing() {
                 <span className="text-sm text-muted">/mo</span>
               </div>
               <p className="mt-1.5 text-sm text-muted">The plan most businesses need.</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="4" stroke="#2563eb" strokeWidth="1.4"/><path d="M5 3v2.5l1.5 1" stroke="#2563eb" strokeWidth="1.2" strokeLinecap="round"/></svg>
+                  KSh 300 / week
+                </span>
+              </div>
 
               <div className="my-5 border-t border-border" />
 
@@ -157,7 +163,7 @@ export default function Pricing() {
               <div className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-br from-[#f97316]/20 via-transparent to-[#06b6d4]/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
               <div className="mb-4">
-                <h3 className="text-base font-bold text-ink">Pro</h3>
+                <h3 className="text-base font-bold text-ink">Custom</h3>
                 <p className="mt-0.5 text-xs text-muted">Agents &amp; shops defined per agreement</p>
               </div>
 
