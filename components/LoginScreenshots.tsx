@@ -4,7 +4,7 @@ import { FadeUp, SlideIn, ScalePop } from "@/components/Motion";
 const portals = [
   {
     key: "owner", label: "Owner Portal",
-    url: "https://sales-tracker-lovat.vercel.app/register",
+    url: "https://owner.qashup.co.ke/register",
     tagline: "You're the boss. Act like it.",
     description: "Every sale, every agent, every shilling — visible from your phone the moment it happens. No more guessing. No more end-of-day surprises.",
     file: "/screenshots/owner.png", alt: "QASHUP owner portal dashboard",
@@ -16,7 +16,7 @@ const portals = [
   },
   {
     key: "shop", label: "Shop Portal",
-    url: "https://shop-olive-tau.vercel.app/pos",
+    url: "https://shop.qashup.co.ke/login/pos",
     tagline: "Your shop, running like a machine.",
     description: "A full POS terminal purpose-built for physical shops. Multiple agents, live stock, and every transaction synced to the owner the second it happens.",
     file: "/screenshots/shop.png", alt: "Epic Shop Tracker POS terminal",
@@ -28,7 +28,7 @@ const portals = [
   },
   {
     key: "agent", label: "Agent Portal",
-    url: "https://agent-app-olive.vercel.app/login",
+    url: "https://agent.qashup.co.ke/login",
     tagline: "Sell more. Know exactly where you stand.",
     description: "Agents see their daily target, their rank, and their commissions live. That alone changes performance — no manager needed to push them.",
     file: "/screenshots/agent.png", alt: "QASHUP agent portal",
