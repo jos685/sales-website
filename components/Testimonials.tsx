@@ -8,7 +8,7 @@ const testimonials = [
   },
   {
     quote: "Managing 3 shops and 8 agents used to mean daily phone calls and guesswork. Now every sale is visible, and cash handovers have eliminated every dispute we used to have.",
-    name: "Fatuma Atieno", role: "Retail Shop Owner", location: "Kisumu",
+    name: "Fatuma Hassan", role: "Retail Shop Owner", location: "Mtwapa",
     initials: "FA", color: "bg-blue-100 text-blue-700",
   },
   {

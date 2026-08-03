@@ -35,7 +35,7 @@ export default function CallToAction() {
               </h2>
 
               <p className="mx-auto mt-6 max-w-lg text-base text-white/80 md:text-lg">
-                Your first 30 days are completely free. Setup takes minutes.
+                Your first 21 days are completely free. Setup takes minutes.
                 Pay only when you&apos;re convinced — via M-Pesa.
               </p>
 
@@ -46,7 +46,7 @@ export default function CallToAction() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 rounded-xl bg-white px-8 py-4 text-sm font-bold text-accent shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl md:px-10 md:text-base"
                 >
-                  Start your free 30-day trial
+                  Start your free 21-day trial
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

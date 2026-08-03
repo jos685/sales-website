@@ -1,6 +1,6 @@
 import { FadeUp, StaggerGrid, StaggerItem } from "@/components/Motion";
 
-const APP_URL = "https://sales-tracker-lovat.vercel.app/register";
+const APP_URL = "https://owner.qashup.co.ke/register";
 const WA_URL  = "https://wa.me/254783069010?text=" + encodeURIComponent("Hi! I'd like to discuss a custom QASHUP package for my business.");
 
 const Check = ({ accent }: { accent?: boolean }) => (
@@ -51,7 +51,7 @@ export default function Pricing() {
             Start free. Scale as you grow.
           </h2>
           <p className="mt-4 max-w-md text-base text-muted">
-            Every plan includes a 30-day free trial. No card required. Pay via M-Pesa.
+            Every plan includes a 21-day free trial. No card required. Pay via M-Pesa.
           </p>
         </FadeUp>
 

@@ -107,7 +107,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           {/* Sign in link — desktop only */}
           <a
-            href="https://sales-tracker-lovat.vercel.app"
+            href="https://owner.qashup.co.ke/login"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden text-sm font-medium text-slate-300 transition-colors hover:text-white md:block"
@@ -200,7 +200,7 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className="rounded-xl bg-accent px-4 py-3 text-center text-sm font-bold text-white"
                 >
-                  Get Started — Free 30 days
+                  Get Started — Free 21 days
                 </a>
               </div>
             </nav>

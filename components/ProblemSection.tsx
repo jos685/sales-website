@@ -18,7 +18,7 @@ const pains = [
     iconBg: "bg-amber-100",
   },
   {
-    emoji: "🙈",
+    emoji: "🏆",
     headline: "You don't know which agents are actually performing.",
     body: "Agent leaderboards show sales numbers — not integrity. Without transaction-level visibility, you're rewarding the best storyteller, not the best seller.",
     borderColor: "border-violet-400",

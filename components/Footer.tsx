@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import BrandName from "@/components/BrandName";
 
-const REGISTER_URL = "https://sales-tracker-lovat.vercel.app/register";
+const REGISTER_URL = "https://owner.qashup.co.ke/register";
 
 const ease = [0.21, 0.47, 0.32, 0.98] as const;
 
@@ -20,9 +20,9 @@ const columns = [
   {
     heading: "Portals",
     links: [
-      { label: "Owner Portal", href: "https://sales-tracker-lovat.vercel.app/register" },
-      { label: "Agent Portal", href: "https://agent-app-olive.vercel.app/login"        },
-      { label: "Shop Portal",  href: "https://shop-olive-tau.vercel.app/pos"           },
+      { label: "Owner Portal", href: "https://owner.qashup.co.ke/register" },
+      { label: "Agent Portal", href: "https://agent.qashup.co.ke/login"       },
+      { label: "Shop Portal",  href: "https://shop.qashup.co.ke/login/pos"           },
     ],
   },
   {
@@ -124,7 +124,7 @@ export default function Footer() {
           <div className="flex items-center gap-2 rounded-full border border-green-500/25 bg-green-500/10 px-4 py-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
             <span className="text-xs font-medium text-green-300">
-              Payments via M-Pesa · Kenya & East Africa
+              Payments option includes M-Pesa · Kenya & East Africa
             </span>
           </div>
 

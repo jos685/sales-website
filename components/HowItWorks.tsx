@@ -6,7 +6,7 @@ const steps = [
     icon: (<svg width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M11 2C6.03 2 2 6.03 2 11s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9Z" stroke="#f97316" strokeWidth="1.6"/><path d="M11 7v4l3 3" stroke="#f97316" strokeWidth="1.6" strokeLinecap="round"/></svg>),
     title: "Get started in minutes",
     body: "Create your account and start tracking immediately. No setup, no IT team, no tech skills required.",
-    chip: "Free 30-day trial",
+    chip: "Free 21-day trial",
   },
   {
     n: "02",
@@ -42,7 +42,7 @@ export default function HowItWorks() {
             Up and running today.
           </h2>
           <p className="mt-4 max-w-lg text-base text-slate-300">
-            Start tracking every sale — even if you have zero tech experience. Your first 30 days are free.
+            Start tracking every sale — even if you have zero tech experience. Your first 21 days are free.
           </p>
         </FadeUp>
 
