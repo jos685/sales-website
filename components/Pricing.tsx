@@ -63,12 +63,12 @@ export default function Pricing() {
 
               <div className="mb-4">
                 <h3 className="text-base font-bold text-ink">Mkulima Mdogo</h3>
-                <p className="mt-0.5 text-xs text-muted">Up to 3 agents · Up to 2 shops</p>
+                <p className="mt-0.5 text-xs text-muted">Up to 4 agents · Up to 3 shops</p>
               </div>
 
               {/* primary price */}
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-black text-ink">KSh 499</span>
+                <span className="text-4xl font-black text-ink">KSh 399</span>
                 <span className="text-sm text-muted">/mo</span>
               </div>
               <p className="mt-1.5 text-sm text-muted">Small team, real results.</p>
@@ -77,11 +77,11 @@ export default function Pricing() {
               <div className="mt-3 flex flex-wrap gap-2">
                 <span className="inline-flex items-center gap-1 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="4" stroke="#16a34a" strokeWidth="1.4"/><path d="M5 3v2.5l1.5 1" stroke="#16a34a" strokeWidth="1.2" strokeLinecap="round"/></svg>
-                  KSh 25 / day
+                  KSh 20 / day
                 </span>
                 <span className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="4" stroke="#2563eb" strokeWidth="1.4"/><path d="M5 3v2.5l1.5 1" stroke="#2563eb" strokeWidth="1.2" strokeLinecap="round"/></svg>
-                  KSh 165 / week
+                  KSh 149 / week
                 </span>
               </div>
               <p className="mt-1.5 text-[10px] text-muted">Flexible billing — daily &amp; weekly available on this plan only.</p>
@@ -120,7 +120,7 @@ export default function Pricing() {
 
               <div className="mb-4">
                 <h3 className="text-base font-bold text-ink">Bossy</h3>
-                <p className="mt-0.5 text-xs text-muted">Up to 10 agents · Up to 5 shops</p>
+                <p className="mt-0.5 text-xs text-muted">Up to 10 agents · Up to 10 shops</p>
               </div>
 
               <div className="flex items-baseline gap-1">
@@ -131,7 +131,7 @@ export default function Pricing() {
               <div className="mt-3 flex flex-wrap gap-2">
                 <span className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="4" stroke="#2563eb" strokeWidth="1.4"/><path d="M5 3v2.5l1.5 1" stroke="#2563eb" strokeWidth="1.2" strokeLinecap="round"/></svg>
-                  KSh 300 / week
+                  KSh 299 / week
                 </span>
               </div>
 
