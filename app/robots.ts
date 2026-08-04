@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://sales-tracker-lovat.vercel.app/sitemap.xml",
-    host: "https://sales-tracker-lovat.vercel.app",
+    sitemap: "https://www.qashup.co.ke/sitemap.xml",
+    host: "https://www.qashup.co.ke/",
   };
 }
