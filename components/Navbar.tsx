@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import BrandName from "@/components/BrandName";
 
-const APP_URL = "https://sales-tracker-lovat.vercel.app/register";
+const APP_URL = "http://owner.qashup.co.ke/register";
 
 const links = [
   { label: "How it works", href: "#how-it-works", id: "how-it-works" },
@@ -185,7 +185,7 @@ export default function Navbar() {
 
               <div className="mt-3 border-t border-white/10 pt-3 flex flex-col gap-2">
                 <a
-                  href="https://sales-tracker-lovat.vercel.app"
+                  href="https://owner.qashup.co.ke/login"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}

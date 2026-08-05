@@ -8,7 +8,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const BASE_URL = "https://sales-tracker-lovat.vercel.app";
+const BASE_URL = "https://owner.qashup.co.ke/login";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
