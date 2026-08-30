@@ -63,7 +63,7 @@ export default function Pricing() {
 
               <div className="mb-4">
                 <h3 className="text-base font-bold text-ink">Mkulima Mdogo</h3>
-                <p className="mt-0.5 text-xs text-muted">Up to 4 agents · Up to 3 shops</p>
+                <p className="mt-0.5 text-xs text-muted">Up to 4 agents · Up to 2 shops</p>
               </div>
 
               {/* primary price */}
@@ -120,7 +120,7 @@ export default function Pricing() {
 
               <div className="mb-4">
                 <h3 className="text-base font-bold text-ink">Bossy</h3>
-                <p className="mt-0.5 text-xs text-muted">Up to 10 agents · Up to 10 shops</p>
+                <p className="mt-0.5 text-xs text-muted">Up to 10 agents · Up to 5 shops</p>
               </div>
 
               <div className="flex items-baseline gap-1">
