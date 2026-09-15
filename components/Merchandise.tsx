@@ -712,6 +712,48 @@ useEffect(() => {
         )}
       </AnimatePresence>
 
+      <AnimatePresence>
+  {totalCount > 0 && !cartOpen && (
+    <motion.button
+    key="floating-cart"
+    type="button"
+    onClick={() => setCartOpen(true)}
+    aria-label={`Open cart, ${totalCount} item${totalCount === 1 ? "" : "s"}`}
+    initial={{ opacity: 0, y: 20, scale: 0.9 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    exit={{ opacity: 0, y: 20, scale: 0.9 }}
+    transition={{ type: "spring", stiffness: 320, damping: 28 }}
+    className="fixed bottom-[72px] right-4 z-[75] flex h-11 items-center gap-2 rounded-full bg-accent px-3.5 text-sm font-bold text-white shadow-xl shadow-accent/40 transition-transform hover:scale-105 active:scale-95 sm:bottom-[96px] sm:right-6 sm:h-14 sm:gap-3 sm:px-5 sm:text-base sm:shadow-2xl"
+  >
+    <span className="relative">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        className="h-5 w-5 sm:h-6 sm:w-6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <circle cx="9" cy="20" r="1.5" />
+        <circle cx="18" cy="20" r="1.5" />
+        <path d="M2.5 3h2.2l2.3 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L21.5 7H5.2" />
+      </svg>
+      <motion.span
+        key={totalCount}
+        initial={{ scale: 0.4, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 500, damping: 20 }}
+        className="absolute -right-1.5 -top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-white px-1 text-[10px] font-black text-accent shadow-md sm:-right-2 sm:-top-2 sm:h-5 sm:min-w-5 sm:px-1.5 sm:text-[11px]"
+      >
+        {totalCount}
+      </motion.span>
+    </span>
+    <span className="text-xs sm:text-sm">{formatPrice(totalPrice)}</span>
+  </motion.button>
+  )}
+</AnimatePresence>
+
       {/* --------------------------- Awaiting payment modal --------------------------- */}
       <AnimatePresence>
         {awaitingPayment && (
