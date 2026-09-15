@@ -212,7 +212,7 @@ export default function Pricing() {
                 </a>
                 <a href="mailto:epicsoftwaredesigners@gmail.com" className="flex items-center gap-2 text-xs text-muted hover:text-ink transition-colors">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="flex-shrink-0 text-[#f97316]"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="2"/><path d="M2 7l10 7 10-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
-                  epicsoftwaredesigners@gmail.com
+                  qashup25@gmail.com
                 </a>
               </div>
             </div>

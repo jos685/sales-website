@@ -12,6 +12,7 @@ import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Merchandise from "@/components/Merchandise";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Testimonials />
       <Pricing />
       <FAQ />
+      <Merchandise />
       <CallToAction />
       <Footer />
       <ScrollToTop />

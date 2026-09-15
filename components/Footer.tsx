@@ -15,6 +15,8 @@ const columns = [
       { label: "How it works", href: "#how-it-works" },
       { label: "Features",     href: "#features"     },
       { label: "Pricing",      href: "#pricing"      },
+      { label: "Terms & Conditions",  href: "/terms"      },
+      { label: "Privacy Policy",      href: "/privacy"      },
     ],
   },
   {
@@ -29,9 +31,9 @@ const columns = [
     heading: "Coverage",
     links: [
       { label: "Kenya",    href: "#" },
-      { label: "Tanzania", href: "#" },
-      { label: "Uganda",   href: "#" },
-      { label: "Rwanda",   href: "#" },
+      { label: "Tanzania- Soon", href: "#" },
+      { label: "Uganda- Soon",   href: "#" },
+      { label: "Rwanda- Soon",   href: "#" },
     ],
   },
 ];
