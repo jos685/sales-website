@@ -338,7 +338,7 @@ useEffect(() => {
                   onClick={() => setOpen(false)}
                   className="rounded-xl bg-accent px-4 py-3 text-center text-sm font-bold text-white"
                 >
-                  Get Started — Free 21 days
+                  Get Started — Free 14 days
                 </a>
               </div>
             </nav>

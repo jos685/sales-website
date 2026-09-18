@@ -169,7 +169,7 @@ const jsonLd = {
           name: "How does the 21-day free trial work?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Sign up, add your agents and shops, and use every feature — completely free for 21 days. No credit card required. At the end of the trial, choose the plan that fits your business size and pay via M-Pesa.",
+            text: "Sign up, add your agents and shops, and use every feature — completely free for 14 days. No credit card required. At the end of the trial, choose the plan that fits your business size and pay via M-Pesa.",
           },
         },
         {

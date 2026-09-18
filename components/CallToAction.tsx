@@ -35,7 +35,7 @@ export default function CallToAction() {
               </h2>
 
               <p className="mx-auto mt-6 max-w-lg text-base text-white/80 md:text-lg">
-                Your first 21 days are completely free. Setup takes minutes.
+                Your first 14 days are completely free. Setup takes minutes.
                 Pay only when you&apos;re convinced — via M-Pesa.
               </p>
 

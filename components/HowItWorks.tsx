@@ -42,7 +42,7 @@ export default function HowItWorks() {
             Up and running today.
           </h2>
           <p className="mt-4 max-w-lg text-base text-slate-300">
-            Start tracking every sale — even if you have zero tech experience. Your first 21 days are free.
+            Start tracking every sale — even if you have zero tech experience. Your first 14 days are free.
           </p>
         </FadeUp>
 

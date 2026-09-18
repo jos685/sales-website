@@ -153,7 +153,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-xl bg-accent px-7 py-4 text-sm font-bold text-white shadow-lg shadow-accent/25 transition-all duration-200 hover:scale-[1.02] hover:shadow-xl hover:shadow-accent/35"
               >
-                Start free — 21 days on us
+                Start free — 14 days on us
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                   <path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
