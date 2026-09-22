@@ -6,7 +6,19 @@ import { Resend } from "https://esm.sh/resend@3";
 
 serve(async (req) => {
   try {
-    const body = await req.json();
+    const raw = await req.text();
+   
+
+    if (!raw) return json({ ok: true });
+
+    let body: any;
+    try {
+      body = JSON.parse(raw);
+    } catch {
+      console.error("merch-mpesa-callback: invalid JSON", raw);
+      return json({ ok: true });
+    }
+
     const stk = body?.Body?.stkCallback;
     if (!stk) return json({ ok: true });
 

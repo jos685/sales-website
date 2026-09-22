@@ -252,8 +252,11 @@ useEffect(() => {
     }
 
     setSubmitting(true);
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 30000); // 30s
     try {
       const res = await fetch("/api/orders", {
+        signal: controller.signal,
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -263,8 +266,13 @@ useEffect(() => {
         }),
       });
 
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || "Could not place order");
+      const text = await res.text();
+      const data = text ? JSON.parse(text) : {};
+      if (!res.ok) {
+        throw new Error(
+          data?.error || `Could not place order (HTTP ${res.status})`,
+        );
+      }
 
       // Clear cart + form immediately
       setCart([]);
@@ -290,6 +298,7 @@ useEffect(() => {
       setToast(err instanceof Error ? err.message : "Something went wrong");
       window.setTimeout(() => setToast(null), 3500);
     } finally {
+      window.clearTimeout(timeoutId);
       setSubmitting(false);
     }
   };
@@ -633,6 +642,7 @@ useEffect(() => {
                     <button
                       type="button"
                       onClick={() => setPaymentMethod("mpesa")}
+                      disabled={submitting}
                       className={`rounded-xl border px-3 py-2.5 text-left text-xs transition-colors ${
                         paymentMethod === "mpesa"
                           ? "border-accent bg-accent/10 text-white"
@@ -645,6 +655,7 @@ useEffect(() => {
                     <button
                       type="button"
                       onClick={() => setPaymentMethod("on_delivery")}
+                      disabled={submitting}
                       className={`rounded-xl border px-3 py-2.5 text-left text-xs transition-colors ${
                         paymentMethod === "on_delivery"
                           ? "border-accent bg-accent/10 text-white"
@@ -656,13 +667,15 @@ useEffect(() => {
                     </button>
                   </div>
 
-                  {/* Delivery details */}
+                  
+                                    {/* Delivery details */}
                   <div className="mb-3 space-y-2">
                     <input
                       value={customer.name}
                       onChange={(e) => setCustomer((c) => ({ ...c, name: e.target.value }))}
                       placeholder="Your name *"
-                      className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-accent focus:outline-none"
+                      disabled={submitting}
+                      className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-accent focus:outline-none disabled:opacity-60"
                     />
                     <input
                       value={customer.phone}
@@ -671,19 +684,22 @@ useEffect(() => {
                         paymentMethod === "mpesa" ? "M-Pesa phone (07…) *" : "Phone number *"
                       }
                       inputMode="tel"
-                      className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-accent focus:outline-none"
+                      disabled={submitting}
+                      className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-accent focus:outline-none disabled:opacity-60"
                     />
                     <input
                       value={customer.location}
                       onChange={(e) => setCustomer((c) => ({ ...c, location: e.target.value }))}
                       placeholder="Delivery location"
-                      className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-accent focus:outline-none"
+                      disabled={submitting}
+                      className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-accent focus:outline-none disabled:opacity-60"
                     />
                     <input
                       value={customer.notes}
                       onChange={(e) => setCustomer((c) => ({ ...c, notes: e.target.value }))}
                       placeholder="Notes (optional)"
-                      className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-accent focus:outline-none"
+                      disabled={submitting}
+                      className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-accent focus:outline-none disabled:opacity-60"
                     />
                   </div>
 
@@ -699,8 +715,34 @@ useEffect(() => {
                     disabled={submitting}
                     className="flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 py-3.5 text-sm font-bold text-white shadow-md shadow-accent/30 transition-all hover:opacity-90 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
                   >
+                    {submitting && (
+                      <svg
+                        className="h-4 w-4 animate-spin"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                          className="opacity-25"
+                        />
+                        <path
+                          d="M4 12a8 8 0 0 1 8-8"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                          strokeLinecap="round"
+                          className="opacity-90"
+                        />
+                      </svg>
+                    )}
                     {submitting
-                      ? "Placing order…"
+                      ? paymentMethod === "mpesa"
+                        ? "Sending M-Pesa prompt…"
+                        : "Placing order…"
                       : paymentMethod === "mpesa"
                         ? `Pay ${formatPrice(totalPrice)} with M-Pesa`
                         : "Place order — Pay on delivery"}

@@ -7,14 +7,31 @@ const MPESA_BASE_URL = "https://api.safaricom.co.ke";
 
 const cors = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
 
   try {
-    const { orderId, reference, phone, amount } = await req.json();
+    // Read body once as text so we can log it and guard against empty payloads
+    const rawBody = await req.text();
+    
+
+    if (!rawBody) {
+      return json({ error: "Request body is empty" }, 400);
+    }
+
+    let parsed: any;
+    try {
+      parsed = JSON.parse(rawBody);
+    } catch {
+      return json({ error: "Invalid JSON in request body" }, 400);
+    }
+
+    const { orderId, reference, phone, amount } = parsed;
 
     if (!orderId || !phone || !amount || amount <= 0) {
       return json({ error: "orderId, phone and amount are required" }, 400);
@@ -106,8 +123,17 @@ serve(async (req) => {
       customerMessage:   stkData.CustomerMessage,
     });
   } catch (err: any) {
-    console.error("merch-stk-push error:", err);
-    return json({ error: err?.message ?? "Internal error" }, 500);
+    console.error("merch-stk-push error:", err?.stack ?? err);
+    // Always return valid JSON, even for non-Error throws
+    return json(
+      {
+        error:
+          (err && typeof err === "object" && "message" in err
+            ? err.message
+            : String(err)) || "Internal error",
+      },
+      500,
+    );
   }
 });
 
